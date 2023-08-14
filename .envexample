@@ -1,0 +1,12 @@
+#django configurations
+
+DEBUG=False_for_production_and_True_for_development
+SECRET_KEY=any_strong_secret_string_for_your_secret_key
+
+# DATABASE CONFIGURATIONS
+
+DATABASE_NAME=database_name
+USER_NAME=user_name
+PASSWORD=user_password
+HOST=host_name
+PORT=port
