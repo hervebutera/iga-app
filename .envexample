@@ -10,3 +10,10 @@ USER_NAME=user_name
 PASSWORD=user_password
 HOST=host_name
 PORT=port
+
+#CLOUDINARY CONFIGURATIONS
+
+CLOUD_NAME='get_cloud_name_from_cloudinary'
+API_KEY= 'get_api_key_from_cloudinary'
+API_SECRET="get_api_secret_from_cloudinary"
+
