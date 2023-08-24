@@ -1,0 +1,73 @@
+[
+    {
+        "model": "course.category",
+        "pk": 1,
+        "fields": {
+            "name": "technology"
+      }
+    },
+    {
+        "model": "course.category",
+        "pk": 2,
+        "fields": {
+          "name": "business"
+        }
+    },
+    {
+        "model": "course.category",
+        "pk": 3,
+        "fields": {
+          "name": "economy"
+        }
+    },
+    {
+        "model": "course.category",
+        "pk": 4,
+        "fields": {
+          "name": "mathematics"
+        }
+    },
+    {
+        "model": "course.category",
+        "pk": 5,
+        "fields": {
+          "name": "engineering"
+        }
+    },
+    {
+        "model": "course.category",
+        "pk": 6,
+        "fields": {
+          "name": "design"
+        }
+    },
+    {
+        "model": "course.category",
+        "pk": 7,
+        "fields": {
+          "name": "architecture"
+        }
+    },
+    {
+        "model": "course.category",
+        "pk": 8,
+        "fields": {
+          "name": "health"
+        }
+    },
+    {
+        "model": "course.category",
+        "pk": 9,
+        "fields": {
+          "name": "creative Arts"
+        }
+    },
+    {
+        "model": "course.category",
+        "pk": 10,
+        "fields": {
+          "name": "lifestyle"
+        }
+    }  
+  ]
+  
