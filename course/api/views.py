@@ -3,7 +3,7 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated
 from course.models import Course, Category, Course_video
-from course.api.serializers import CourseSerializer, CourseVideoSerializer
+from course.api.serializers import CourseSerializer, CourseVideoSerializer, CourseWithVideoSerializer
 
 
 def save_course_video(request, course):
@@ -46,3 +46,25 @@ def api_create_course_view(request):
     data['response'] = f"Course with title: {request.data['title']} has been uploaded successfully."
 
     return Response(data, status = status.HTTP_201_CREATED) 
+
+
+@api_view(['GET'])
+@permission_classes((IsAuthenticated,))
+def api_all_courses_with_videos_view(request):
+    courses = Course.objects.all()
+    serializer = CourseWithVideoSerializer(courses, many=True)
+    return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+
+@api_view(['GET'])
+@permission_classes((IsAuthenticated,))
+def api_single_course_with_video_view(request, course_id):
+    try:
+        course = Course.objects.get(pk=course_id)
+    except Course.DoesNotExist:
+        return Response({'error': 'Course not found.'}, status=status.HTTP_404_NOT_FOUND)
+
+    serializer = CourseWithVideoSerializer(course)
+    return Response(serializer.data, status=status.HTTP_200_OK)
+
